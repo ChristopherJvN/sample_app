@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   validates :email_address, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
   has_secure_password
   self.per_page = 10
+  
 
   validates :password, length: { minimum: 6, maximum: 10 }
 

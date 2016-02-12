@@ -1,0 +1,10 @@
+<tr>
+  <td><%= link_to user.name, user %></td>
+  <td><%= user.email_address %></td>
+  <td><%= user.created_at.to_formatted_s(:short) %></td>
+  <td><%= user.updated_at.to_formatted_s(:short)  %></td>
+  <td><%= link_to 'Edit', edit_user_path(user) %></td>
+  <% if current_user.admin? %>
+  <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <%end%>
+</tr>
