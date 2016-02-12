@@ -6,9 +6,4 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get wtf" do
-    get :wtf
-    assert_response :success
-  end
-
 end

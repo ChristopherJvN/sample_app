@@ -1,0 +1,19 @@
+<h1>Users</h1>
+<%= will_paginate %>
+<table class='table'>
+  <thead>
+    <tr>
+      <th>User Name</th>
+      <th>Email Address</th>
+      <th>Time created</th>
+      <th>Time updated</th>
+
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody >
+  <%= render @users %>
+  </tbody>
+</table>
+<%= will_paginate %>
