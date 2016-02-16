@@ -1,10 +1,13 @@
 <% provide(:title, @user.name) %>
 <div class="row">
   <aside class="col-md-4">
+
     <section>
       <h1>
         <%= @user.name %>
       </h1>
+      <%= image_tag @user.avatar.url if @user.avatar? %>
+
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>

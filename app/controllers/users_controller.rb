@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
   def edit
   end
-  
+
   def following
       @title = "Following"
       @user  = User.find(params[:id])
@@ -60,8 +60,9 @@ class UsersController < ApplicationController
   end
   private def user_params
     params.require(:user).permit(:name, :email_address, :password,
-                                 :password_confirmation)
+                                 :password_confirmation, :avatar)
   end
+  
 
   def set_user
     @user = User.find(params[:id])

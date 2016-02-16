@@ -15,6 +15,9 @@
     <%= f.label :password_confirmation, "Confirmation" %>
     <%= f.password_field :password_confirmation %>
 
+    _<span class="avatar">
+      <%= f.file_field :avatar, accept: 'image/jpeg,image/gif,image/png' %>
+    </span>
 
     <%= f.submit "Submit", class: "btn btn-primary" %>
     <% end %>
