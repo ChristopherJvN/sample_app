@@ -31,8 +31,8 @@ class User < ActiveRecord::Base
   end
 
   def feed
-    microposts
-  end
+    Micropost.where("user_id IN (?) OR user_id = ?", following_ids, id)
+        end
 
   # Returns a random token.
   def self.new_token
